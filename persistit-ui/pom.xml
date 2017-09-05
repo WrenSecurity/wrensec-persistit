@@ -11,7 +11,7 @@
   <artifactId>forgerock-persistit-ui</artifactId>
   <packaging>jar</packaging>
 
-  <name>forgerock-persistit-ui</name>
+  <name>Wren Persistit UI</name>
 
   <dependencies>
     <dependency>
