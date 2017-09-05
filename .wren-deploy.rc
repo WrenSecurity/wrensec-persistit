@@ -1,0 +1,14 @@
+export MAVEN_PACKAGE="forgerock-persistit"
+export BINTRAY_PACKAGE="wrensec-persistit"
+export JFROG_PACKAGE="org/forgerock/commons/forgerock-persistit"
+
+package_accept_release_tag() {
+  local tag_name="${1}"
+
+  if [ "${tag_name}" != "4.3.1" ]; then
+    echo "Skipping ${tag_name} since we only want to build 4.3.1 right now."
+    return -1
+  else
+    return 0
+  fi
+}
