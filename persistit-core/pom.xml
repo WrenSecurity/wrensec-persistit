@@ -11,7 +11,7 @@
   <artifactId>forgerock-persistit-core</artifactId>
   <packaging>jar</packaging>
 
-  <name>forgerock-persistit-core</name>
+  <name>Wren Persistit Core</name>
 
   <dependencies>
     <dependency>

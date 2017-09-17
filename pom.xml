@@ -13,14 +13,14 @@
   <version>4.3.1</version>
   <packaging>pom</packaging>
 
-  <name>ForgeRock Persistit</name>
+  <name>Wren Persistit</name>
   <description>Java B+Tree Key-Value Store Library</description>
   <inceptionYear>2005</inceptionYear>
-  <url>https://stash.forgerock.org/projects/COMMONS/repos/forgerock-persistit</url>
+  <url>http://wrensecurity.org</url>
 
   <organization>
-    <name>ForgeRock</name>
-    <url>http://www.forgerock.com</url>
+    <name>Wren Security</name>
+    <url>http://wrensecurity.org</url>
   </organization>
 
   <modules>
@@ -37,33 +37,39 @@
   </licenses>
 
   <scm>
-    <developerConnection>scm:git:ssh://git@stash.forgerock.org:7999/commons/forgerock-persistit.git</developerConnection>
-    <connection>scm:git:ssh://git@stash.forgerock.org:7999/commons/forgerock-persistit.git</connection>
-    <url>https://stash.forgerock.org/projects/COMMONS/repos/forgerock-persistit/browse</url>
-    <tag>4.3.1</tag>
+    <url>https://github.com/WrenSecurity/wrensec-persistit</url>
+    <connection>scm:git:git://github.com/WrenSecurity/wrensec-persistit.git</connection>
+    <developerConnection>scm:git:git@github.com:WrenSecurity/wrensec-persistit.git</developerConnection>
   </scm>
 
   <distributionManagement>
     <snapshotRepository>
-      <id>forgerock-snapshots</id>
-      <name>ForgeRock Snapshot Repository</name>
+      <id>wrensecurity-snapshots</id>
+      <name>Wren Security Snapshot Repository</name>
       <url>${forgerockDistMgmtSnapshotsUrl}</url>
     </snapshotRepository>
+
     <repository>
-      <id>forgerock-staging</id>
-      <name>ForgeRock Release Repository</name>
+      <id>wrensecurity-releases</id>
+      <name>Wren Security Release Repository</name>
       <url>${forgerockDistMgmtReleasesUrl}</url>
     </repository>
   </distributionManagement>
   
   <repositories>
+    <!-- Needed to retrieve parent POM -->
     <repository>
-      <id>forgerock-staging-repository</id>
-      <name>ForgeRock Release Repository</name>
-      <url>${forgerockDistMgmtReleasesUrl}</url>
+      <id>wrensecurity-releases</id>
+      <name>Wren Security Release Repository</name>
+      <url>https://wrensecurity.jfrog.io/wrensecurity/releases</url>
+
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
+
+      <releases>
+        <enabled>true</enabled>
+      </releases>
     </repository>
   </repositories>
 
@@ -74,8 +80,6 @@
     <animal-sniffer.signature.version>1.0</animal-sniffer.signature.version>
     <version.animal-sniffer.plugin>1.11</version.animal-sniffer.plugin>
     <version.maven-license.plugin>2.6</version.maven-license.plugin>
-    <forgerockDistMgmtSnapshotsUrl>http://maven.forgerock.org/repo/snapshots</forgerockDistMgmtSnapshotsUrl>
-    <forgerockDistMgmtReleasesUrl>http://maven.forgerock.org/repo/releases</forgerockDistMgmtReleasesUrl>
   </properties>
 
   <dependencyManagement>
