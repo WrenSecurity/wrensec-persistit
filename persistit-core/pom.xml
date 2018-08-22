@@ -18,12 +18,12 @@
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
     </dependency>
-    
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
     </dependency>
-    
+
     <dependency>
       <groupId>org.assertj</groupId>
       <artifactId>assertj-core</artifactId>
@@ -40,6 +40,7 @@
           <include>LICENSE.txt</include>
         </includes>
       </resource>
+
       <resource>
         <directory>src/main/resources</directory>
         <filtering>true</filtering>
@@ -47,6 +48,7 @@
           <include>com/persistit/persistit_version</include>
         </includes>
       </resource>
+
       <resource>
         <directory>src/main/resources</directory>
         <filtering>false</filtering>
@@ -61,15 +63,18 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
       </plugin>
+
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>rmic-maven-plugin</artifactId>
       </plugin>
+
       <!-- check copyright/license headers -->
       <plugin>
         <groupId>com.mycila</groupId>
         <artifactId>license-maven-plugin</artifactId>
       </plugin>
+
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>animal-sniffer-maven-plugin</artifactId>
