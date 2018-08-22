@@ -79,6 +79,28 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>animal-sniffer-maven-plugin</artifactId>
       </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>buildnumber-maven-plugin</artifactId>
+        <version>1.4</version>
+
+        <executions>
+          <execution>
+            <id>generate-buildnumber</id>
+
+            <goals>
+              <goal>create</goal>
+            </goals>
+
+            <configuration>
+              <buildNumberPropertyName>buildRevision</buildNumberPropertyName>
+              <shortRevisionLength>11</shortRevisionLength>
+              <revisionOnScmFailure>-1</revisionOnScmFailure>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 </project>
