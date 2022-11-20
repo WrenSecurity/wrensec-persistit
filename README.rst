@@ -1,3 +1,6 @@
+This project is deprecated - see https://github.com/WrenSecurity/wrends/issues/2
+
+
 ************************************
 Akiban Persistit
 ************************************
